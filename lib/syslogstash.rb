@@ -10,7 +10,7 @@ class Syslogstash
 		@writer = LogstashWriter.new(servers)
 
 		@readers = sockets.map { |f, tags| SyslogReader.new(f, tags, @writer) }
-	end
+	endPenn
 
 	def run
 		@writer.run
